@@ -6,210 +6,42 @@
   <title>Vanakam Priya Kannu — Anniversary</title>
   <style>
     :root{
-      --max-width:420px;
-      --accent:#e9426b;
-      --muted:#666;
-      --bg:#ffffff;
-      --card-radius:18px;
-      --gap:20px;
+      --max-width:420px; --accent:#e9426b; --muted:#666; --bg:#ffffff; --card-radius:18px;
       --font-sans: "Poppins", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    html,body{
-      height:100%;
-      margin:0;
-      background:var(--bg);
-      font-family:var(--font-sans);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      color:#111;
-    }
-
-    /* container centers everything */
-    .page {
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      overflow:hidden;
-    }
-
-    /* hearts layer */
-    .hearts {
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .heart {
-      position:absolute;
-      font-size:18px;
-      transform-origin:center;
-      opacity:0.85;
-      will-change:transform, opacity;
-      animation: floaty 6s infinite ease-in-out;
-      user-select:none;
-    }
-    @keyframes floaty {
-      0% { transform: translateY(0) rotate(0deg) scale(1); opacity:0.9; }
-      50% { transform: translateY(-18px) rotate(8deg) scale(1.05); opacity:1; }
-      100% { transform: translateY(0) rotate(0deg) scale(1); opacity:0.9; }
-    }
-
-    /* centered content card */
-    .card {
-      position:relative;
-      z-index:2;
-      width:min(92%,var(--max-width));
-      text-align:center;
-      background:rgba(255,255,255,0.9);
-      border-radius:var(--card-radius);
-      padding:36px 26px;
-      box-shadow: 0 8px 30px rgba(16,16,20,0.06);
-    }
-
-    h1 {
-      margin:0 0 8px 0;
-      font-size:28px;
-      line-height:1.05;
-    }
-    p.lead {
-      margin:0 0 18px 0;
-      color:var(--muted);
-      font-size:15px;
-    }
-
-    .big-text {
-      font-size:20px;
-      margin:8px 0 20px;
-      line-height:1.35;
-    }
-
-    .btn-row {
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      margin-top:14px;
-      flex-wrap:wrap;
-    }
-
-    button.btn {
-      background:linear-gradient(180deg,#fff 0%, #fff 100%);
-      border:1px solid rgba(0,0,0,0.06);
-      padding:10px 18px;
-      border-radius:999px;
-      font-weight:600;
-      cursor:pointer;
-      min-width:110px;
-      box-shadow: 0 6px 18px rgba(16,16,20,0.05);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    button.btn:hover{ transform:translateY(-3px); box-shadow:0 10px 22px rgba(16,16,20,0.08); }
-    button.primary {
-      background: linear-gradient(180deg, #ff6b8a, #e9426b);
-      color: white;
-      border: none;
-      box-shadow: 0 10px 25px rgba(233,66,107,0.15);
-    }
-    button.ghost {
-      background:transparent;
-      border: 1px dashed rgba(0,0,0,0.08);
-    }
-
-    /* small foot */
-    .tiny {
-      margin-top:12px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    /* bouquet chooser grid */
-    .grid {
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      margin-top:12px;
-      flex-wrap:wrap;
-    }
-    .thumb {
-      width:110px;
-      height:110px;
-      border-radius:14px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(180deg, rgba(250,250,250,1), rgba(247,247,247,1));
-      border:1px solid rgba(0,0,0,0.05);
-      cursor:pointer;
-      user-select:none;
-      transition: transform .12s ease, box-shadow .12s ease;
-      padding:8px;
-    }
-    .thumb.selected{
-      transform:translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      outline:2px solid rgba(233,66,107,0.12);
-    }
-    .thumb svg { width:86px; height:86px; }
-
-    /* bouquet preview */
-    .preview {
-      margin-top:14px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:160px;
-    }
-    .preview .wrap {
-      display:inline-block;
-      border-radius:20px;
-      padding:14px;
-      background:linear-gradient(180deg,#fff,#fff);
-      box-shadow:0 8px 20px rgba(0,0,0,0.06);
-    }
-
-    /* final banquet */
-    .banquet-img {
-      width:220px;
-      height:220px;
-      border-radius:18px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(180deg,#fff3f5, #fff);
-      box-shadow:0 12px 28px rgba(233,66,107,0.06);
-      border:1px solid rgba(233,66,107,0.08);
-      margin:6px auto 12px;
-      padding:12px;
-    }
-
-    /* responsive tweaks */
-    @media (max-width:420px){
-      h1{ font-size:24px; }
-      .thumb{ width:100px; height:100px; }
-    }
+    html,body{height:100%;margin:0;background:var(--bg);font-family:var(--font-sans);color:#111}
+    .page{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .hearts{position:absolute;inset:0;pointer-events:none;z-index:0}
+    .heart{position:absolute;font-size:18px;transform-origin:center;opacity:.85;animation:floaty 6s infinite ease-in-out;user-select:none}
+    @keyframes floaty{0%{transform:translateY(0) rotate(0deg) scale(1);opacity:.9}50%{transform:translateY(-18px) rotate(8deg) scale(1.05);opacity:1}100%{transform:translateY(0) rotate(0deg) scale(1);opacity:.9}}
+    .card{position:relative;z-index:2;width:min(92%,var(--max-width));text-align:center;background:rgba(255,255,255,0.94);border-radius:var(--card-radius);padding:34px 22px;box-shadow:0 8px 30px rgba(16,16,20,0.06)}
+    h1{margin:0 0 8px 0;font-size:28px;line-height:1.05}
+    .lead{margin:0 0 18px 0;color:var(--muted);font-size:15px}
+    .big-text{font-size:20px;margin:8px 0 20px;line-height:1.35}
+    .btn-row{display:flex;gap:12px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+    button.btn{background:linear-gradient(180deg,#fff 0%, #fff 100%);border:1px solid rgba(0,0,0,0.06);padding:10px 18px;border-radius:999px;font-weight:600;cursor:pointer;min-width:110px;box-shadow:0 6px 18px rgba(16,16,20,0.05);transition:transform .15s ease,box-shadow .15s ease}
+    button.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(16,16,20,0.08)}
+    button.primary{background:linear-gradient(180deg,#ff6b8a,#e9426b);color:#fff;border:none;box-shadow:0 10px 25px rgba(233,66,107,0.15)}
+    button.ghost{background:transparent;border:1px dashed rgba(0,0,0,0.08)}
+    .tiny{margin-top:12px;font-size:13px;color:var(--muted)}
+    .grid{display:flex;gap:12px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+    .thumb{width:110px;height:110px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fbfbfb,#f6f6f6);border:1px solid rgba(0,0,0,0.05);cursor:pointer;user-select:none;transition:transform .12s ease,box-shadow .12s ease;padding:8px}
+    .thumb.selected{transform:translateY(-6px) scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,0.08);outline:2px solid rgba(233,66,107,0.12)}
+    .thumb img{max-width:86px;max-height:86px;object-fit:contain;pointer-events:none}
+    .preview{margin-top:14px;display:flex;align-items:center;justify-content:center;min-height:140px}
+    .wrap{display:inline-block;border-radius:20px;padding:12px;background:linear-gradient(180deg,#fff,#fff);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+    .banquet-img{width:220px;height:220px;border-radius:18px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff3f5,#fff);box-shadow:0 12px 28px rgba(233,66,107,0.06);border:1px solid rgba(233,66,107,0.08);margin:6px auto 12px;padding:12px}
+    @media (max-width:420px){h1{font-size:24px}.thumb{width:100px;height:100px}}
   </style>
 </head>
 <body>
   <div class="page" id="app">
     <div class="hearts" id="hearts"></div>
-
-    <main class="card" id="card">
-      <!-- content injected by JS -->
-    </main>
+    <main class="card" id="card"></main>
   </div>
 
 <script>
-/*
-  Simple single-file decision flow as requested.
-  - Random hearts background generated per page/visit.
-  - State machine to navigate pages/steps.
-  - Bouquet mini flow with inline SVGs.
-*/
-
-/* /* ---------- Replace inline SVGs with image asset URLs ---------- */
-/* Use relative paths if images are in repo assets/..., or full URLs if external */
+/* ---------- ASSETS configuration ---------- */
 const ASSETS = {
   leaf1: 'assets/leaves/leaf1.png',
   leaf2: 'assets/leaves/leaf2.png',
@@ -219,32 +51,26 @@ const ASSETS = {
 };
 
 /* ---------- Heart background ---------- */
-function makeHearts(n = 28) {
+function makeHearts(n = 30) {
   const cont = document.getElementById('hearts');
   cont.innerHTML = '';
   const heartChars = ['❤️','💖','💘','💕','💓'];
-  for (let i=0; i<n; i++){
-    const span = document.createElement('span');
-    span.className = 'heart';
-    span.style.left = (Math.random()*100).toFixed(2) + '%';
-    span.style.top  = (Math.random()*100).toFixed(2) + '%';
-    span.style.fontSize = (12 + Math.random()*24).toFixed(0) + 'px';
-    span.style.opacity = (0.5 + Math.random()*0.5).toFixed(2);
-    span.style.transform = `rotate(${(-25 + Math.random()*50).toFixed(1)}deg)`;
-    span.style.animationDuration = (4 + Math.random()*6).toFixed(1) + 's';
-    span.textContent = heartChars[Math.floor(Math.random()*heartChars.length)];
-    cont.appendChild(span);
+  for (let i=0;i<n;i++){
+    const s = document.createElement('span');
+    s.className='heart';
+    s.style.left = (Math.random()*100).toFixed(2) + '%';
+    s.style.top  = (Math.random()*100).toFixed(2) + '%';
+    s.style.fontSize = (12 + Math.random()*28).toFixed(0) + 'px';
+    s.style.opacity = (0.4 + Math.random()*0.6).toFixed(2);
+    s.style.transform = `rotate(${(-25 + Math.random()*50).toFixed(1)}deg)`;
+    s.style.animationDuration = (4 + Math.random()*6).toFixed(1) + 's';
+    s.textContent = heartChars[Math.floor(Math.random()*heartChars.length)];
+    cont.appendChild(s);
   }
 }
 
-/* ---------- State machine for pages ---------- */
-const state = {
-  node: 'home',   // nodes: home, decision1, d1_therium, d1_theriyathu_seq, decision2, d2_therium, d2_theriyathu, bouquet_stepN, final
-  seqIndex: 0,    // for B1..B4 sequence
-  bouquet: { leaves: [], flowers: [] },
-};
-
-/* B1..B4 sequence messages */
+/* ---------- State ---------- */
+const state = { node:'home', seqIndex:0, bouquet:{ leaves:[], flowers:[] } };
 const seqMessages = [
   `I love you so so so so… so much Thango.`,
   `I miss you so so so.... much Thango.`,
@@ -252,297 +78,75 @@ const seqMessages = [
   `Thank you for everything. I love you.`
 ];
 
-/* render functions for nodes */
 const card = document.getElementById('card');
 
-function render() {
-  // regenerate hearts pattern each render for a fresh random sampling
-  makeHearts(26 + Math.floor(Math.random()*18));
-  switch(state.node) {
-    case 'home': renderHome(); break;
-    case 'decision1': renderDecision1(); break;
-    case 'd1_therium': renderD1Therium(); break;
-    case 'd1_theriyathu_seq': renderD1Seq(); break;
-    case 'decision2': renderDecision2(); break;
-    case 'd2_therium': renderD2Therium(); break;
-    case 'd2_theriyathu': renderD2Theriyathu(); break;
-    case 'bouquet_step1': renderBouquetStep1(); break;
-    case 'bouquet_step2': renderBouquetStep2(); break;
-    case 'bouquet_step3': renderBouquetStep3(); break;
-    case 'bouquet_step4': renderBouquetStep4(); break;
-    case 'bouquet_step5': renderBouquetStep5(); break;
-    case 'bouquet_step6': renderBouquetStep6(); break;
-    case 'final': renderFinal(); break;
-    default: renderHome(); break;
-  }
-}
+function render(){ makeHearts(24 + Math.floor(Math.random()*20)); switch(state.node){
+  case 'home': renderHome(); break;
+  case 'decision1': renderDecision1(); break;
+  case 'd1_therium': renderD1Therium(); break;
+  case 'd1_theriyathu_seq': renderD1Seq(); break;
+  case 'decision2': renderDecision2(); break;
+  case 'd2_therium': renderD2Therium(); break;
+  case 'd2_theriyathu': renderD2Theriyathu(); break;
+  case 'bouquet_step1': renderBouquetStep1(); break;
+  case 'bouquet_step2': renderBouquetStep2(); break;
+  case 'bouquet_step3': renderBouquetStep3(); break;
+  case 'bouquet_step4': renderBouquetStep4(); break;
+  case 'bouquet_step5': renderBouquetStep5(); break;
+  case 'bouquet_step6': renderBouquetStep6(); break;
+  case 'final': renderFinal(); break;
+  default: renderHome();
+}}
 
-/* ---------- Node renderers ---------- */
-function clearCard() { card.innerHTML = ''; }
-
-function renderHome(){
-  clearCard();
-  const h = document.createElement('h1'); h.innerText = 'Vanakam Priya Kannu';
-  const lead = document.createElement('p'); lead.className='lead'; lead.innerText = 'A tiny decision-tree for our anniversary.';
-  const btnRow = document.createElement('div'); btnRow.className='btn-row';
-  const vanakkam = makeBtn('Vanakkam', 'primary', () => { state.node = 'decision1'; state.seqIndex=0; render(); });
-  btnRow.appendChild(vanakkam);
-  card.appendChild(h);
-  card.appendChild(lead);
-  card.appendChild(btnRow);
-  const tiny = document.createElement('div'); tiny.className='tiny'; tiny.innerText='(Tap the button to begin)';
-  card.appendChild(tiny);
-}
-
-function renderDecision1(){
-  clearCard();
-  const h = document.createElement('h1'); h.innerText='Unnaku onnu theriuma?';
-  const lead = document.createElement('p'); lead.className='big-text'; lead.innerText = '';
-  const a = makeBtn('Therium', 'primary', () => { state.node='d1_therium'; render(); });
-  const b = makeBtn('Theriyathu', '', () => { state.node='d1_theriyathu_seq'; state.seqIndex=0; render(); });
-  const row = document.createElement('div'); row.className='btn-row'; row.append(a,b);
-  card.appendChild(h); card.appendChild(lead); card.appendChild(row);
-}
-
-function renderD1Therium(){
-  clearCard();
-  const h = document.createElement('h1'); h.innerText='';
-  const big = document.createElement('div'); big.className='big-text';
-  big.innerText = `Unnaku naraya therium nu ennaku therium. Priya nu peru vachalaey athi buthisaali than. Ana na solla varathu unnaku theriyathey.`;
-  const btnRow = document.createElement('div'); btnRow.className='btn-row';
-  btnRow.appendChild(makeBtn('Therinjiko', 'primary', () => { state.node='d1_theriyathu_seq'; state.seqIndex=0; render(); }));
-  card.appendChild(big); card.appendChild(btnRow);
-}
-
-function renderD1Seq(){
-  clearCard();
-  const h = document.createElement('h1'); h.innerText='';
-  const text = document.createElement('div'); text.className='big-text';
-  text.innerText = seqMessages[state.seqIndex] || '';
-  const row = document.createElement('div'); row.className='btn-row';
-  if (state.seqIndex < seqMessages.length - 1) {
-    row.appendChild(makeBtn('Next', 'primary', () => { state.seqIndex++; render(); }));
-  } else {
-    row.appendChild(makeBtn('Next', 'primary', () => { state.node='decision2'; render(); }));
-  }
-  card.appendChild(text); card.appendChild(row);
-}
-
-function renderDecision2(){
-  clearCard();
-  const h = document.createElement('h1'); h.innerText='Unnaku inonnu theriuma?';
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Therium', 'primary', () => { state.node='d2_therium'; render(); }));
-  row.appendChild(makeBtn('Theriyathu', '', () => { state.node='d2_theriyathu'; render(); }));
-  card.appendChild(h); card.appendChild(row);
-}
-
-function renderD2Therium(){
-  clearCard();
-  const text = document.createElement('div'); text.className='big-text';
-  text.innerText = `Thirundha maatiey.`;
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Therinjiko', 'primary', () => { state.node='d2_theriyathu'; render(); }));
-  card.appendChild(text); card.appendChild(row);
-}
-
-function renderD2Theriyathu(){
-  clearCard();
-  const text = document.createElement('div'); text.className='big-text';
-  text.innerText = `You loved a man who can’t even make a bouquet for you… So make one for yourself.`;
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Make', 'primary', () => { state.node='bouquet_step1'; render(); }));
-  card.appendChild(text); card.appendChild(row);
-}
-
-/* ---------- Bouquet Steps ---------- */
-
-function renderBouquetStep1(){
-  clearCard();
-  const title = document.createElement('h1'); title.innerText='Pick the leaves and grass';
-  const hint = document.createElement('div'); hint.className='tiny'; hint.innerText='Choose up to 2';
-  const grid = document.createElement('div'); grid.className='grid';
-  const t1 = makeThumb('leaf1', SVGs.leaf1, () => toggleSelect('leaves','leaf1', 2));
-  const t2 = makeThumb('leaf2', SVGs.leaf2, () => toggleSelect('leaves','leaf2', 2));
-  grid.appendChild(t1); grid.appendChild(t2);
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Next', 'primary', () => { state.node='bouquet_step2'; render(); }));
-  card.appendChild(title); card.appendChild(hint); card.appendChild(grid); card.appendChild(row);
-  refreshThumbs();
-}
-
-function renderBouquetStep2(){
-  clearCard();
-  const title = document.createElement('h1'); title.innerText='Pick the flowers';
-  const hint = document.createElement('div'); hint.className='tiny'; hint.innerText='Choose your favorites';
-  const grid = document.createElement('div'); grid.className='grid';
-  const t1 = makeThumb('flower1', SVGs.flower1, () => toggleSelect('flowers','flower1', 4));
-  const t2 = makeThumb('flower2', SVGs.flower2, () => toggleSelect('flowers','flower2', 4));
-  grid.appendChild(t1); grid.appendChild(t2);
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Next', 'primary', () => { state.node='bouquet_step3'; render(); }));
-  card.appendChild(title); card.appendChild(hint); card.appendChild(grid); card.appendChild(row);
-  refreshThumbs();
-}
-
-function renderBouquetStep3(){
-  clearCard();
-  const title = document.createElement('h1'); title.innerText="Now you have everything. Opps you forgot to add something";
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('To know', 'primary', () => { state.node='bouquet_step4'; render(); }));
-  card.appendChild(title); card.appendChild(row);
-  // small preview of current bouquet
-  const preview = document.createElement('div'); preview.className='preview';
-  preview.innerHTML = makeBouquetPreviewHTML();
-  card.appendChild(preview);
-}
-
-function renderBouquetStep4(){
-  clearCard();
-  const title = document.createElement('h1'); title.innerText="Its my Love ❤️";
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Next', 'primary', () => { state.node='bouquet_step5'; render(); }));
-  card.appendChild(title); card.appendChild(row);
-  const preview = document.createElement('div'); preview.className='preview';
-  preview.innerHTML = makeBouquetPreviewHTML();
-  card.appendChild(preview);
-}
-
-function renderBouquetStep5(){
-  clearCard();
-  const title = document.createElement('h1'); title.innerText="Now you have everything, Let's wrap it up";
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn("Wrap it up", 'primary', () => { state.node='bouquet_step6'; render(); }));
-  card.appendChild(title); card.appendChild(row);
-  const preview = document.createElement('div'); preview.className='preview';
-  preview.innerHTML = makeBouquetPreviewHTML();
-  card.appendChild(preview);
-}
-
-function renderBouquetStep6(){
-  clearCard();
-  const title = document.createElement('h1'); title.innerText="Wow! Great You have made a Banquet for yourself!";
-  const text = document.createElement('div'); text.className='big-text';
-  text.innerText = "Scold your boyfriend to make one next time.";
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('You Banquet', 'primary', () => { state.node='final'; render(); }));
-  card.appendChild(title); card.appendChild(text); card.appendChild(row);
-  const preview = document.createElement('div'); preview.className='preview';
-  preview.innerHTML = makeBouquetWrappedHTML();
-  card.appendChild(preview);
-}
-
-/* ---------- Final ---------- */
-function renderFinal(){
-  clearCard();
-  const ban = document.createElement('div'); ban.className='banquet-img';
-  ban.innerHTML = makeBouquetWrappedHTML(true);
-  const title = document.createElement('h1'); title.innerText = "Happy Anniversary Thangom";
-  const row = document.createElement('div'); row.className='btn-row';
-  row.appendChild(makeBtn('Replay', '', () => { resetAll(); render(); }));
-  row.appendChild(makeBtn('Restart at Home', 'ghost', () => { state.node='home'; render(); }));
-  card.appendChild(ban); card.appendChild(title); card.appendChild(row);
-}
-
-/* ---------- Helpers ---------- */
-
+function clearCard(){ card.innerHTML=''; }
 function makeBtn(text, klass='', onClick){
-  const b = document.createElement('button');
-  b.className = 'btn' + (klass? ' ' + klass : '');
-  b.innerText = text;
-  b.addEventListener('click', onClick);
-  return b;
+  const b = document.createElement('button'); b.className='btn' + (klass? ' ' + klass : ''); b.innerText = text; b.addEventListener('click', onClick); return b;
 }
 
-function makeThumb(id, svg, onClick){
-  const d = document.createElement('div');
-  d.className='thumb';
-  d.dataset.id = id;
-  d.innerHTML = svg;
-  d.addEventListener('click', () => { onClick(); refreshThumbs(); });
-  return d;
-}
+/* ---------- Pages ---------- */
+function renderHome(){ clearCard(); const h=document.createElement('h1'); h.innerText='Vanakam Priya Kannu'; const lead=document.createElement('p'); lead.className='lead'; lead.innerText='A tiny decision-tree for our anniversary.'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Vanakkam','primary', ()=>{ state.node='decision1'; state.seqIndex=0; render(); })); card.appendChild(h); card.appendChild(lead); card.appendChild(row); const tiny=document.createElement('div'); tiny.className='tiny'; tiny.innerText='(Tap to begin)'; card.appendChild(tiny); }
 
-function toggleSelect(group, id, maxAllowed=2){
-  const arr = state.bouquet[group];
-  const idx = arr.indexOf(id);
-  if (idx >= 0) {
-    arr.splice(idx,1);
-  } else {
-    if (arr.length >= maxAllowed) {
-      // remove oldest then add
-      arr.shift();
-    }
-    arr.push(id);
-  }
-}
+function renderDecision1(){ clearCard(); const h=document.createElement('h1'); h.innerText='Unnaku onnu theriuma?'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Therium','primary', ()=>{ state.node='d1_therium'; render(); })); row.appendChild(makeBtn('Theriyathu','', ()=>{ state.node='d1_theriyathu_seq'; state.seqIndex=0; render(); })); card.appendChild(h); card.appendChild(row); }
 
-function refreshThumbs(){
-  // mark thumbs as selected based on state
-  document.querySelectorAll('.thumb').forEach(t => {
-    const id = t.dataset.id;
-    if (state.bouquet.leaves.includes(id) || state.bouquet.flowers.includes(id)) {
-      t.classList.add('selected');
-    } else t.classList.remove('selected');
-  });
-}
+function renderD1Therium(){ clearCard(); const big=document.createElement('div'); big.className='big-text'; big.innerText = `Unnaku naraya therium nu ennaku therium. Priya nu peru vachalaey athi buthisaali than. Ana na solla varathu unnaku theriyathey.`; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Therinjiko','primary', ()=>{ state.node='d1_theriyathu_seq'; state.seqIndex=0; render(); })); card.appendChild(big); card.appendChild(row); }
 
-/* Build a simple vertical stacked bouquet preview using chosen items */
-function makeBouquetPreviewHTML(){
-  // show small vertical stack SVG assembled
-  const chosenLeaves = state.bouquet.leaves;
-  const chosenFlowers = state.bouquet.flowers;
-  let html = '<div class="wrap" aria-hidden="true">';
-  // arrange flowers above leaves
-  if (chosenFlowers.length === 0) {
-    html += '<div style="padding:26px 6px;color:var(--muted)">No flowers chosen</div>';
-  } else {
-    chosenFlowers.forEach(f => {
-      html += `<div style="margin-bottom:6px">${SVGs[f] || ''}</div>`;
-    });
-  }
-  if (chosenLeaves.length > 0) {
-    html += '<div style="margin-top:6px">';
-    chosenLeaves.forEach(l => html += `<div style="margin-bottom:4px">${SVGs[l]||''}</div>`);
-    html += '</div>';
-  }
-  html += '</div>';
-  return html;
-}
+function renderD1Seq(){ clearCard(); const text=document.createElement('div'); text.className='big-text'; text.innerText = seqMessages[state.seqIndex] || ''; const row=document.createElement('div'); row.className='btn-row'; if (state.seqIndex < seqMessages.length-1) row.appendChild(makeBtn('Next','primary', ()=>{ state.seqIndex++; render(); })); else row.appendChild(makeBtn('Next','primary', ()=>{ state.node='decision2'; render(); })); card.appendChild(text); card.appendChild(row); }
 
-/* wrapped bouquet final look */
-function makeBouquetWrappedHTML(forFinal=false){
-  // minimal wrapped mockup: combine into a stylized SVG/HTML
-  const chosenLeaves = state.bouquet.leaves;
-  const chosenFlowers = state.bouquet.flowers;
-  // For final we show a pleasant arrangement inside a "wrap"
-  const parts = [];
-  chosenFlowers.forEach(f => parts.push(SVGs[f]));
-  chosenLeaves.forEach(l => parts.push(SVGs[l]));
-  const inner = parts.join('');
-  const wrap = `
-    <div style="display:inline-block;text-align:center">
-      <div style="transform:translateY(0);">${inner || '<div style="color:var(--muted)">A surprise bouquet</div>'}</div>
-      <div style="margin-top:8px; font-weight:700; color:var(--accent)">💝</div>
-    </div>
-  `;
-  return wrap;
-}
+function renderDecision2(){ clearCard(); const h=document.createElement('h1'); h.innerText='Unnaku inonnu theriuma?'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Therium','primary', ()=>{ state.node='d2_therium'; render(); })); row.appendChild(makeBtn('Theriyathu','', ()=>{ state.node='d2_theriyathu'; render(); })); card.appendChild(h); card.appendChild(row); }
 
-function resetAll(){
-  state.node='home';
-  state.seqIndex=0;
-  state.bouquet = { leaves: [], flowers: [] };
-}
+function renderD2Therium(){ clearCard(); const big=document.createElement('div'); big.className='big-text'; big.innerText='Thirundha maatiey.'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Therinjiko','primary', ()=>{ state.node='d2_theriyathu'; render(); })); card.appendChild(big); card.appendChild(row); }
 
-/* initialize */
-(function init(){
-  // set initial node
-  state.node='home';
-  // make a gentle fade-in
-  render();
-})();
+function renderD2Theriyathu(){ clearCard(); const big=document.createElement('div'); big.className='big-text'; big.innerText = `You loved a man who can’t even make a bouquet for you… So make one for yourself.`; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Make','primary', ()=>{ state.node='bouquet_step1'; render(); })); card.appendChild(big); card.appendChild(row); }
 
+/* ---------- Bouquet steps ---------- */
+function makeThumb(id, src, onClick){ const d=document.createElement('div'); d.className='thumb'; d.dataset.id=id; const img=document.createElement('img'); img.src=src; img.alt=id; d.appendChild(img); d.addEventListener('click', ()=>{ onClick(); refreshThumbs(); }); return d; }
+function toggleSelect(group,id,maxAllowed=2){ const arr=state.bouquet[group]; const idx=arr.indexOf(id); if (idx>=0) arr.splice(idx,1); else { if (arr.length>=maxAllowed) arr.shift(); arr.push(id); } }
+function refreshThumbs(){ document.querySelectorAll('.thumb').forEach(t=>{ const id=t.dataset.id; if (state.bouquet.leaves.includes(id) || state.bouquet.flowers.includes(id)) t.classList.add('selected'); else t.classList.remove('selected'); }); }
+
+function renderBouquetStep1(){ clearCard(); const title=document.createElement('h1'); title.innerText='Pick the leaves and grass'; const hint=document.createElement('div'); hint.className='tiny'; hint.innerText='Choose up to 2'; const grid=document.createElement('div'); grid.className='grid'; grid.appendChild(makeThumb('leaf1', ASSETS.leaf1, ()=>toggleSelect('leaves','leaf1',2))); grid.appendChild(makeThumb('leaf2', ASSETS.leaf2, ()=>toggleSelect('leaves','leaf2',2))); const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Next','primary', ()=>{ state.node='bouquet_step2'; render(); })); card.appendChild(title); card.appendChild(hint); card.appendChild(grid); card.appendChild(row); refreshThumbs(); }
+
+function renderBouquetStep2(){ clearCard(); const title=document.createElement('h1'); title.innerText='Pick the flowers'; const hint=document.createElement('div'); hint.className='tiny'; hint.innerText='Choose your favorites'; const grid=document.createElement('div'); grid.className='grid'; grid.appendChild(makeThumb('flower1', ASSETS.flower1, ()=>toggleSelect('flowers','flower1',4))); grid.appendChild(makeThumb('flower2', ASSETS.flower2, ()=>toggleSelect('flowers','flower2',4))); const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Next','primary', ()=>{ state.node='bouquet_step3'; render(); })); card.appendChild(title); card.appendChild(hint); card.appendChild(grid); card.appendChild(row); refreshThumbs(); }
+
+function makeBouquetPreviewHTML(){ const chosenFlowers=state.bouquet.flowers, chosenLeaves=state.bouquet.leaves; let html='<div class="wrap">'; if (!chosenFlowers.length) html+='<div style="padding:26px 6px;color:var(--muted)">No flowers chosen</div>'; else chosenFlowers.forEach(f=> html+=`<div style="margin-bottom:6px"><img src="${ASSETS[f]||''}" alt="${f}" style="max-width:140px;max-height:110px;object-fit:contain;display:block;margin:0 auto;"></div>`); if (chosenLeaves.length){ html+='<div style="margin-top:6px">'; chosenLeaves.forEach(l=> html+=`<div style="margin-bottom:4px"><img src="${ASSETS[l]||''}" alt="${l}" style="max-width:140px;max-height:90px;object-fit:contain;display:block;margin:0 auto;"></div>`); html+='</div>'; } html+='</div>'; return html; }
+
+function renderBouquetStep3(){ clearCard(); const title=document.createElement('h1'); title.innerText="Now you have everything. Opps you forgot to add something"; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('To know','primary', ()=>{ state.node='bouquet_step4'; render(); })); card.appendChild(title); card.appendChild(row); const preview=document.createElement('div'); preview.className='preview'; preview.innerHTML=makeBouquetPreviewHTML(); card.appendChild(preview); }
+
+function renderBouquetStep4(){ clearCard(); const title=document.createElement('h1'); title.innerText="Its my Love ❤️"; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Next','primary', ()=>{ state.node='bouquet_step5'; render(); })); card.appendChild(title); card.appendChild(row); const preview=document.createElement('div'); preview.className='preview'; preview.innerHTML=makeBouquetPreviewHTML(); card.appendChild(preview); }
+
+function renderBouquetStep5(){ clearCard(); const title=document.createElement('h1'); title.innerText="Now you have everything, Let's wrap it up"; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn("Wrap it up",'primary', ()=>{ state.node='bouquet_step6'; render(); })); card.appendChild(title); card.appendChild(row); const preview=document.createElement('div'); preview.className='preview'; preview.innerHTML=makeBouquetPreviewHTML(); card.appendChild(preview); }
+
+function makeBouquetWrappedHTML(forFinal=false){ if (ASSETS.bouquetWrap && forFinal) return `<img src="${ASSETS.bouquetWrap}" alt="wrapped bouquet" style="max-width:200px;max-height:200px;display:block;margin:0 auto;">`; const chosenFlowers=state.bouquet.flowers, chosenLeaves=state.bouquet.leaves; let html='<div style="text-align:center">'; chosenFlowers.forEach(f=> html+=`<img src="${ASSETS[f]||''}" alt="${f}" style="max-width:140px;max-height:100px;object-fit:contain;display:block;margin:6px auto;">`); chosenLeaves.forEach(l=> html+=`<img src="${ASSETS[l]||''}" alt="${l}" style="max-width:140px;max-height:80px;object-fit:contain;display:block;margin:4px auto;">`); if (!chosenFlowers.length && !chosenLeaves.length) html=`<div style="color:var(--muted)">A surprise bouquet</div>`; html+='</div>'; return html; }
+
+function renderBouquetStep6(){ clearCard(); const title=document.createElement('h1'); title.innerText="Wow! Great You have made a Banquet for yourself!"; const text=document.createElement('div'); text.className='big-text'; text.innerText="Scold your boyfriend to make one next time."; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('You Banquet','primary', ()=>{ state.node='final'; render(); })); card.appendChild(title); card.appendChild(text); card.appendChild(row); const preview=document.createElement('div'); preview.className='preview'; preview.innerHTML=makeBouquetWrappedHTML(false); card.appendChild(preview); }
+
+function renderFinal(){ clearCard(); const ban=document.createElement('div'); ban.className='banquet-img'; ban.innerHTML=makeBouquetWrappedHTML(true); const title=document.createElement('h1'); title.innerText="Happy Anniversary Thangom"; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Replay','', ()=>{ resetAll(); render(); })); row.appendChild(makeBtn('Restart at Home','ghost', ()=>{ state.node='home'; render(); })); const dl=makeBtn('Download Bouquet','primary', ()=>{ downloadBouquetPNG(); }); row.appendChild(dl); card.appendChild(ban); card.appendChild(title); card.appendChild(row); }
+
+function loadImage(src){ return new Promise((res,rej)=>{ const img=new Image(); img.onload=()=>res(img); img.onerror=()=>res(null); img.src=src; }); }
+
+async function downloadBouquetPNG(){ if (ASSETS.bouquetWrap){ const link=document.createElement('a'); link.href=ASSETS.bouquetWrap; link.download='my_bouquet.png'; document.body.appendChild(link); link.click(); link.remove(); return; } const chosen = state.bouquet.flowers.concat(state.bouquet.leaves); const imgs=[]; for (let id of chosen){ const src=ASSETS[id]; if (!src) continue; const img = await loadImage(src); if (img) imgs.push(img); } const width=800, height=1000; const canvas=document.createElement('canvas'); canvas.width=width; canvas.height=height; const ctx=canvas.getContext('2d'); ctx.fillStyle='#fff'; ctx.fillRect(0,0,width,height); ctx.fillStyle='#e9426b'; ctx.font='36px sans-serif'; ctx.textAlign='center'; ctx.fillText('Happy Anniversary', width/2, 60); let y=120; for (let img of imgs){ const maxW=width*0.7; const scale=Math.min(1, maxW/img.width); const dw=img.width*scale; const dh=img.height*scale; const x=(width-dw)/2; ctx.drawImage(img, x, y, dw, dh); y += dh + 12; } ctx.fillStyle='#e9426b'; ctx.fillRect(width*0.22, y, width*0.56, 28); ctx.fillStyle='#333'; ctx.font='20px sans-serif'; ctx.fillText('From: Vanakam Priya Kannu', width/2, height - 36); canvas.toBlob(function(blob){ const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='my_bouquet.png'; document.body.appendChild(a); a.click(); URL.revokeObjectURL(url); a.remove(); }, 'image/png'); }
+
+function resetAll(){ state.node='home'; state.seqIndex=0; state.bouquet={ leaves:[], flowers:[] }; }
+(function init(){ state.node='home'; render(); })();
 </script>
 </body>
 </html>
