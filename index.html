@@ -208,35 +208,14 @@
   - Bouquet mini flow with inline SVGs.
 */
 
-/* ---------- Inline SVG "assets" ---------- */
-const SVGs = {
-  leaf1: `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#b6f2c9"/><stop offset="1" stop-color="#52c06a"/></linearGradient></defs>
-    <path d="M56 8C36 18 24 26 8 56c26-6 40-20 48-48z" fill="url(#g1)"/>
-  </svg>`,
-  leaf2: `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#dff7e8"/><stop offset="1" stop-color="#2aa85a"/></linearGradient></defs>
-    <path d="M8 8c20 10 32 18 48 48C30 44 18 36 8 8z" fill="url(#g2)"/>
-  </svg>`,
-  flower1: `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs><linearGradient id="f1" x1="0" x2="1"><stop offset="0" stop-color="#ffd6e0"/><stop offset="1" stop-color="#ff83a8"/></linearGradient></defs>
-    <g transform="translate(8,6)">
-      <circle cx="24" cy="10" r="8" fill="#ffd27f"></circle>
-      <path d="M24 10 m-14 0 a14 8 0 1 0 28 0 a14 8 0 1 0 -28 0" fill="url(#f1)" />
-    </g>
-  </svg>`,
-  flower2: `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs><linearGradient id="f2" x1="0" x2="1"><stop offset="0" stop-color="#ffdced"/><stop offset="1" stop-color="#ff5f99"/></linearGradient></defs>
-    <g transform="translate(6,4)">
-      <circle cx="26" cy="18" r="6" fill="#fff1a8"/>
-      <g fill="url(#f2)">
-        <ellipse cx="10" cy="10" rx="8" ry="6"/>
-        <ellipse cx="42" cy="10" rx="8" ry="6"/>
-        <ellipse cx="26" cy="-4" rx="8" ry="6"/>
-        <ellipse cx="26" cy="36" rx="8" ry="6"/>
-      </g>
-    </g>
-  </svg>`
+/* /* ---------- Replace inline SVGs with image asset URLs ---------- */
+/* Use relative paths if images are in repo assets/..., or full URLs if external */
+const ASSETS = {
+  leaf1: 'assets/leaves/leaf1.png',
+  leaf2: 'assets/leaves/leaf2.png',
+  flower1: 'assets/flowers/flower1.png',
+  flower2: 'assets/flowers/flower2.png',
+  bouquetWrap: 'assets/bouquet/wrap.png'
 };
 
 /* ---------- Heart background ---------- */
