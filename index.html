@@ -104,7 +104,7 @@ function makeBtn(text, klass='', onClick){
 }
 
 /* ---------- Pages ---------- */
-function renderHome(){ clearCard(); const h=document.createElement('h1'); h.innerText='Vanakam Priya Kannu'; const lead=document.createElement('p'); lead.className='lead'; lead.innerText='A tiny decision-tree for our anniversary.'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Vanakkam','primary', ()=>{ state.node='decision1'; state.seqIndex=0; render(); })); card.appendChild(h); card.appendChild(lead); card.appendChild(row); const tiny=document.createElement('div'); tiny.className='tiny'; tiny.innerText='(Tap to begin)'; card.appendChild(tiny); }
+function renderHome(){ clearCard(); const h=document.createElement('h1'); h.innerText='Vanakam Priya Kannu'; const lead=document.createElement('p'); lead.className='lead'; lead.innerText='A tiny not a gift from youruseless boyfriend'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Vanakkam','primary', ()=>{ state.node='decision1'; state.seqIndex=0; render(); })); card.appendChild(h); card.appendChild(lead); card.appendChild(row); const tiny=document.createElement('div'); tiny.className='tiny'; tiny.innerText='(Tap to begin)'; card.appendChild(tiny); }
 
 function renderDecision1(){ clearCard(); const h=document.createElement('h1'); h.innerText='Unnaku onnu theriuma?'; const row=document.createElement('div'); row.className='btn-row'; row.appendChild(makeBtn('Therium','primary', ()=>{ state.node='d1_therium'; render(); })); row.appendChild(makeBtn('Theriyathu','', ()=>{ state.node='d1_theriyathu_seq'; state.seqIndex=0; render(); })); card.appendChild(h); card.appendChild(row); }
 
